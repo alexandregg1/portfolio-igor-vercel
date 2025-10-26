@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igor Alexandre | Desenvolvedor Full Stack</title>
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <!-- Removi o nome ||| Navbar à Esquerda<div class="logo">Igor Alexandre</div> -->
+        <ul class="nav-links">
+            <li><a href="#home" class="active"><i class="fas fa-home"></i> Início</a></li>
+            <li><a href="#skills"><i class="fas fa-cogs"></i> Habilidades</a></li>
+            <li><a href="#projects"><i class="fas fa-code"></i> Projetos</a></li>
+            <li><a href="#services"><i class="fas fa-laptop-code"></i> Serviços</a></li>
+            <li><a href="#experience"><i class="fas fa-briefcase"></i> Experiência</a></li>
+            <li><a href="#about"><i class="fas fa-user"></i> Sobre</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contato</a></li>
+        </ul>
+    </nav>
+
+    <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="main-content">
+        <section class="hero" id="home">
+            <div id="particles-js"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Igor <span class="highlight">Alexandre</span></h1>
+                        <div class="subtitle">Graduando em Ciência da Computação</div>
+                        <p>Desenvolvedor Full Stack com foco em Front-end, Back-end e interesse em Análise de Dados.
+                            Transformo ideias em soluções digitais funcionais e elegantes.</p>
+                        <div class="hero-btns">
+                            <a href="#projects" class="btn">Ver Projetos</a>
+                            <a href="#contact" class="btn btn-outline">Entre em Contato</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="hero-frame">
+                            <img src="assets/pixelHome.png" alt="Igor Alexandre" class="hero-photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills" id="skills">
+            <div class="container">
+                <h2 class="section-title">Habilidades</h2>
+
+                <div class="skills-carousel-container">
+                    <div class="skills-carousel" id="skillsCarousel">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="container">
+                <h2 class="section-title">Projetos Acadêmicos</h2>
+                <div class="projects-grid">
+                    <div class="project-card" data-project="1">
+                        <div class="project-img">
+                            <img src="assets/mockups/lumi.png" alt="Project 1">
+                        </div>
+                        <div class="project-info">
+                            <h3>Lumi - Project</h3>
+                            <p>Desenvolvimento de um site para análise automatizada de currículos com integração da
+                                Gemini AI.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">Gemini AI API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="https://github.com/SabrynaRodrigues/lumi_project" target="_blank"><i class="fab fa-github"></i> Código</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="2">
+                        <div class="project-img">
+                            <img src="assets/mockups/m2.png" alt="Project 2">
+                        </div>
+                        <div class="project-info">
+                            <h3>Landing Page M2 Academia</h3>
+                            <p>Landing page institucional para academia integrada a sistema de atendimento automatizado
+                                via WhatsApp.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://alexandregg1.github.io/Projeto/" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="https://github.com/alexandregg1/Projeto/tree/main" target="_blank"><i class="fab fa-github"></i> Código</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="3">
+                        <div class="project-img">
+                            <img src="assets/mockups/4upact.png" alt="Project 3">
+                        </div>
+                        <div class="project-info">
+                            <h3>Landing Page - 4UPact - Marketing Digital</h3>
+                            <p>Landing page institucional para agência de marketing digital.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://alexandregg1.github.io/4upact-teste/" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="https://github.com/alexandregg1/4upact-teste" target="_blank"><i class="fab fa-github"></i> Código</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="4">
+                        <div class="project-img">
+                            <img src="assets/mockups/neura.png" alt="Project 4">
+                        </div>
+                        <div class="project-info">
+                            <h3>Landing Page - Centro de Psicologia Infantil</h3>
+                            <p>Página institucional com informações sobre localização, redes sociais e formas de
+                                contato.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="https://github.com/TR1Z1E/Projeto-Neuro-crescer" target="_blank"><i class="fab fa-github"></i> Código</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project="5">
+                        <div class="project-img">
+                            <img src="assets/mockups/bot.png" alt="Project 5">
+                        </div>
+                        <div class="project-info">
+                            <h3>Bot para WhatsApp</h3>
+                            <p>Bot para atendimento automático via WhatsApp.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Node.js</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="https://github.com/alexandregg1/ProjetoBOT" target="_blank"><i class="fab fa-github"></i> Código</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="container">
+                <h2 class="section-title">Serviços</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Desenvolvimento Front-end</h3>
+                        <p>Criação de interfaces modernas e responsivas usando HTML, CSS, JavaScript e frameworks como
+                            Bootstrap.</p>
+                    </div>
+                    <!--<div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Desenvolvimento Back-end</h3>
+                        <p>Implementação de APIs, sistemas e lógica de negócio usando Node.js, C# e integração com
+                            bancos de dados.</p>
+                    </div> -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Websites Responsivos</h3>
+                        <p>Desenvolvimento de sites que funcionam perfeitamente em todos os dispositivos e tamanhos de
+                            tela.</p>
+                    </div>
+                    <!--<div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Integração com APIs</h3>
+                        <p>Conexão com serviços externos como WhatsApp Business, Gemini AI e outras APIs para
+                            funcionalidades avançadas.</p>
+                    </div> -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <h3>Manutenção e Suporte</h3>
+                        <p>Suporte técnico, correção de problemas e manutenção preventiva de sistemas e infraestrutura.
+                        </p>
+                    </div>
+                    <!-- <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Consultoria em TI</h3>
+                        <p>Orientação sobre tecnologias, arquitetura de sistemas e melhores práticas de desenvolvimento.
+                        </p>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <section class="experience" id="experience">
+            <div class="container">
+                <h2 class="section-title">Experiência Profissional</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">ABR 2025 – ATUAL</div>
+                        <div class="timeline-content">
+                            <h3>Estagiário de T.I</h3>
+                            <h4>31° Cartório de Pirituba - SP</h4>
+                            <ul>
+                                <li>Suporte técnico a sistemas e infraestrutura de TI</li>
+                                <li>Apoio na resolução de problemas relacionados a hardware e software</li>
+                                <li>Manutenção preventiva e corretiva de equipamentos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">SET 2024 – DEZ 2024</div>
+                        <div class="timeline-content">
+                            <h3>Caixa</h3>
+                            <h4>Cinemark</h4>
+                            <ul>
+                                <li>Atendimento ao cliente no caixa, garantindo precisão e eficiência nas transações
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 – 2024</div>
+                        <div class="timeline-content">
+                            <h3>Freelancer Regional</h3>
+                            <h4>Produção de Websites</h4>
+                            <ul>
+                                <li>Desenvolvimento de sites personalizados, incluindo planejamento, design responsivo e
+                                    implementação</li>
+                                <li>Experiência em gerenciamento de projetos e entrega de soluções digitais sob medida
+                                    para clientes regionais</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title">Sobre Mim</h2>
+                <div class="about-content">
+                    <div class="about-img">
+                        <div class="about-frame">
+                            <img src="assets/pixelPerfil.png" alt="Igor Alexandre - Desenvolvedor" class="about-photo">
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <h3>Desenvolvedor Full Stack & Estudante de Ciência da Computação</h3>
+                        <p>Graduando em Ciência da Computação pela Universidade Nove de Julho (UNINOVE), com experiência
+                            acadêmica em desenvolvimento front-end e back-end. Além disso, possuo experiência em
+                            manutenção e suporte de computadores.</p>
+                        <p>Meu objetivo é atuar em áreas relacionadas à Tecnologia da Informação, Desenvolvimento
+                            Front-end e Back-end, além de ter interesse em Análise de Dados e Engenharia de Dados.</p>
+                        <p>Sou uma pessoa proativa, com facilidade para aprender novas tecnologias e trabalhar em
+                            equipe. Busco constantemente me desenvolver profissionalmente e contribuir para projetos
+                            desafiadores.</p>
+                        <div class="hero-btns">
+                            <a href="#contact" class="btn">Vamos Conversar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">Entre em Contato</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3>Localização</h3>
+                                <p>São Paulo, Brasil</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <a href="mailto:igor.alexandre@example.com" class="email-contact"
+                                    style="text-decoration: none; color: inherit;">
+                                    <h3>Email</h3>
+                                    <p>igor.alexandre@example.com</p>
+                                </a>
+                            </div>
+                        </div>
+                        <!--<div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3>Telefone</h3>
+                                <p>+55 (11) 99999-9999</p>
+                            </div>
+                        </div>-->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h3>Formação</h3>
+                                <p>Bacharelado em Ciência da Computação - UNINOVE (2023 - Presente)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form action="https://formsubmit.co/tercasigor@gmail.com" method="POST">
+                            <div class="form-group">
+                                <label for="name">Nome</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Assunto</label>
+                                <input type="text" id="subject" name="subject" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensagem</label>
+                                <textarea id="message" name="message" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="logo">Igor Alexandre</div>
+                    <div class="social-links">
+                        <a href="https://github.com/alexandregg1" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/igor-alexandre-garcia-gomes-556422302/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/alexandre__igor" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 Igor Alexandre. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-header">
+                <h2 id="modalTitle">Título do Projeto</h2>
+                <p id="modalDescription">Descrição do projeto</p>
+            </div>
+            <div class="modal-body">
+                <h3>Tecnologias Utilizadas</h3>
+                <div class="modal-tech" id="modalTech">
+                </div>
+
+                <div class="modal-responsibilities">
+                    <h3>Minhas Responsabilidades</h3>
+                    <div id="modalResponsibilities">
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="" id="modalDemo" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Ver Demo</a>
+                    <a href="" id="modalCode" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Ver Código</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
