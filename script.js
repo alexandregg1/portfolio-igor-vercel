@@ -16,7 +16,6 @@ const projectsData = {
         technologies: ["HTML", "CSS", "Bootstrap"],
         responsibilities: [
             "Desenvolvimento do front-end responsivo com Bootstrap",
-            "Criação de bot de WhatsApp utilizando node.js"
         ],
         demo: "https://alexandregg1.github.io/Projeto/",
         code: "https://github.com/alexandregg1/Projeto/tree/main"
