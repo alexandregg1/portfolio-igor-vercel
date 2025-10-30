@@ -3,7 +3,7 @@ const projectsData = {
     1: {
         title: "Plataforma de Análise de Currículos com IA",
         description: "Desenvolvimento de um site para análise automatizada de currículos com integração da Gemini AI para fornecer feedback inteligente sobre candidaturas.",
-        technologies: ["HTML", "CSS", "JavaScript", "C#", "Gemini AI API", "Entity Framework"],
+        technologies: ["HTML", "CSS", "JavaScript", "C#", "Gemini AI API"],
         responsibilities: [
             "Desenvolvimento do front-end responsivo com HTML, CSS e JavaScript",
         ],
@@ -62,12 +62,15 @@ const projectsData = {
 
 // Dados das tecnologias para o carrossel
 const technologies = [
-    { name: "HTML & CSS", icon: "fab fa-html5", level: "Avançado" },
-    { name: "Bootstrap", icon: "fab fa-bootstrap", level: "Intermediário" },
-    { name: "JavaScript", icon: "fab fa-js", level: "Intermediário" },
-    { name: "Node.js", icon: "fab fa-node-js", level: "Básico" },
-    { name: "Python", icon: "fab fa-python", level: "Intermediário" },
-    { name: "C", icon: "fas fa-code", level: "Básico" }
+    { name: "HTML", icon: "fab fa-html5", level: "" },
+    { name: "CSS", icon: "fab fa-css3-alt", level: "" },
+    { name: "Bootstrap", icon: "fab fa-bootstrap", level: "" },
+    { name: "JavaScript", icon: "fab fa-js", level: "" },
+    { name: "Node.js", icon: "fab fa-node-js", level: "" },
+    { name: "Python", icon: "fab fa-python", level: "" },
+    { name: "C", icon: "fas fa-code", level: "" },
+    { name: "SQL", icon: "fas fa-database", level: "" },
+    { name: "GIT", icon: "fab fa-git-alt", level: "" },
 ];
 
 // Elementos do modal
