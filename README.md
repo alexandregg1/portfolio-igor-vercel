@@ -1,5 +1,5 @@
 # Portfólio de Igor Alexandre
-Desenvolvedor Front-end / Full Stack / Designer de UI/UX
+Desenvolvedor Front-end / Full Stack / Desenvolvedor Python
 
 ## Olá! Eu sou Igor Alexandre 👋
 Sou um desenvolvedor full-stack apaixonado por criar experiências interativas e fluidas. Neste portfólio, você encontrará uma seleção dos meus projetos pessoais e de trabalho.
