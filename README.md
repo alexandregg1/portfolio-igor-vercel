@@ -18,7 +18,7 @@ Sou um desenvolvedor full-stack apaixonado por criar experiências interativas e
 - **Responsabilidades**: Criação das páginas web, integrando o desgin ao HTML, CSS e JS.
 
 ### [Projeto 2: PORTFÓLIO](https://github.com/alexandregg1/Projeto/tree/main)
-- **Descrição**: Um site responsivo de portfólio com animações suaves e design moderno.
+- **Descrição**: Um site responsivo de portfólio com animações suaves e design moderno, inspirado em jogos antigos.
 - **Tecnologias**: HTML, CSS, JavaScript.
 - **Aprendizado**: Trabalhei em design responsivo e otimização de desempenho para garantir uma boa experiência em dispositivos móveis.
 - [Veja o Projeto Online](https://igoralexandre.vercel.app/)
