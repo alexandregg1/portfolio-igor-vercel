@@ -5,7 +5,7 @@ Desenvolvedor Front-end / Full Stack / Desenvolvedor Python
 Sou um desenvolvedor full-stack apaixonado por criar experiências interativas e fluidas. Neste portfólio, você encontrará uma seleção dos meus projetos pessoais e de trabalho.
 
 ## Habilidades
-- **Linguagens**: JavaScript, HTML, CSS
+- **Linguagens**: JavaScript, HTML, CSS e Python
 - **Frameworks**: Node.js
 - **Ferramentas**: Git, Figma, VS Code, Photoshop 
 - **Banco de Dados**: MySQL
