@@ -890,7 +890,7 @@ img[alt="Project 5"]{
     box-shadow: var(--pixel-shadow);
 }
 
-.timeline-item::after {
+/*.timeline-item::after {
     content: '';
     position: absolute;
     top: 46px;
@@ -1195,12 +1195,14 @@ footer {
 
     .timeline-date {
         left: 30px;
-        transform: none;
+        transform: translateY(-9px);
+        padding: 2px;
     }
 
     .timeline-item::after {
         left: 30px;
         transform: none;
+        display: none;
     }
 
     .skills-carousel {
