@@ -16,6 +16,7 @@ Sou um desenvolvedor full-stack apaixonado por criar experiências interativas e
 - **Descrição**: Desenvolvimento de um site para análise automatizada de currículos com integração da Gemini AI para fornecer feedback inteligente sobre candidaturas.
 - **Tecnologias**: HTML, CSS, JavaScript.
 - **Responsabilidades**: Criação das páginas web, integrando o desgin ao HTML, CSS e JS.
+- [Veja o Video de Apresentação](https://www.youtube.com/watch?v=1DIdJb87a-A)
 
 ### [Projeto 2: PORTFÓLIO](https://github.com/alexandregg1/Projeto/tree/main)
 - **Descrição**: Um site responsivo de portfólio com animações suaves e design moderno, inspirado em jogos antigos.

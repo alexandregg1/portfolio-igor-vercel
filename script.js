@@ -8,7 +8,7 @@ const projectsData = {
             "Desenvolvimento do front-end responsivo com HTML, CSS e JavaScript",
         ],
         demo: "https://www.youtube.com/watch?v=1DIdJb87a-A",
-        code: "https://github.com/SabrynaRodrigues/lumi_project"
+        code: "https://github.com/SabrynaRodrigues/lumi_project/tree/consumindoAPI"
     },
     2: {
         title: "Landing Page - Academia M2 Fitness",
