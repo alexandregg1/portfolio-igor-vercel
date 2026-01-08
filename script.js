@@ -7,7 +7,7 @@ const projectsData = {
         responsibilities: [
             "Desenvolvimento do front-end responsivo com HTML, CSS e JavaScript",
         ],
-        demo: "#",
+        demo: "https://www.youtube.com/watch?v=1DIdJb87a-A",
         code: "https://github.com/SabrynaRodrigues/lumi_project"
     },
     2: {
@@ -43,7 +43,7 @@ const projectsData = {
             "Garantia de responsividade em todos os dispositivos",
             "Publicação e configuração do domínio"
         ],
-        demo: "",
+        demo: "##",
         code: "https://github.com/TR1Z1E/Projeto-Neuro-crescer"
     },
     5: {
@@ -54,7 +54,7 @@ const projectsData = {
             "Desenvolvimento do bot de atendimento automático",
             "Implementação de sistema de respostas inteligentes",
         ],
-        demo: "#",
+        demo: "##",
         code: "https://github.com/alexandregg1/ProjetoBOT"
     }
 };
@@ -80,6 +80,7 @@ const modalDescription = document.getElementById('modalDescription');
 const modalTech = document.getElementById('modalTech');
 const modalResponsibilities = document.getElementById('modalResponsibilities');
 const modalDemo = document.getElementById('modalDemo');
+const modalVideo = document.getElementById('modalVideo');
 const modalCode = document.getElementById('modalCode');
 
 // Inicializar carrossel infinito
@@ -102,6 +103,8 @@ function initInfiniteCarousel() {
         carousel.appendChild(skillItem);
     });
 }
+
+const regex = /^https?:\/\/[a-zA-Z0-9-]+\.github\.io(\/[A-Za-z0-9._-]+)*\/?$/;
 
 // Abrir modal do projeto
 document.querySelectorAll('.project-card').forEach(card => {
@@ -135,7 +138,7 @@ document.querySelectorAll('.project-card').forEach(card => {
             });
 
             // Atualizar links - com verificação para demos indisponíveis
-            if (project.demo === "#" || project.demo === "" || !project.demo) {
+            if (project.demo === "##" || project.demo === "#" || !project.demo) {
                 modalDemo.innerHTML = '<i class="fas fa-clock"></i> Demo em Breve';
                 modalDemo.style.background = '#6c757d';
                 modalDemo.style.cursor = 'not-allowed';
@@ -144,10 +147,19 @@ document.querySelectorAll('.project-card').forEach(card => {
                     alert('🚧 Demo em desenvolvimento!\nEste projeto ainda não possui versão pública.');
                 };
                 modalDemo.removeAttribute('href');
-            } else {
+            }
+            if (regex.test(project.demo)) {
                 modalDemo.href = project.demo;
                 modalDemo.target = "_blank";
                 modalDemo.innerHTML = '<i class="fas fa-external-link-alt"></i> Ver Demo';
+                modalDemo.style.background = '';
+                modalDemo.style.cursor = 'pointer';
+                modalDemo.onclick = null;
+            }
+            if (project.demo.includes("youtube.com") || project.demo.includes("youtu.be")) {
+                modalDemo.href = project.demo;
+                modalDemo.target = "_blank";
+                modalDemo.innerHTML = '<i class="fa-brands fa-youtube"></i>Ver Video';
                 modalDemo.style.background = '';
                 modalDemo.style.cursor = 'pointer';
                 modalDemo.onclick = null;
