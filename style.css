@@ -1369,3 +1369,159 @@ footer {
         padding: 12px 8px;
     }
 }
+
+/* Fim do estilo pixel art */
+/* ============================================
+   SISTEMA DE IDIOMAS - ESTILOS
+   ============================================ */
+
+/* Seletor de Idiomas - Canto Superior Direito */
+.language-selector {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1100;
+    width: auto;
+}
+
+.lang-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    border: var(--pixel-border);
+    cursor: pointer;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+    transition: all 0.1s ease;
+    box-shadow: var(--pixel-shadow);
+    position: relative;
+    top: 0;
+    left: 0;
+    min-width: 80px;
+}
+
+.lang-btn:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 4px 4px 0px #000;
+    background: linear-gradient(135deg, var(--primary-light), var(--primary));
+}
+
+.lang-btn i {
+    filter: drop-shadow(2px 2px 0px #000);
+}
+
+.lang-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 180px;
+    background: var(--dark-light);
+    border: var(--pixel-border);
+    box-shadow: var(--pixel-shadow);
+    margin-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.2s ease;
+    z-index: 1000;
+}
+
+.language-selector:hover .lang-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.lang-option {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    background: var(--dark);
+    border: none;
+    border-bottom: 2px solid #000;
+    color: var(--text);
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.lang-option:last-child {
+    border-bottom: none;
+}
+
+.lang-option:hover {
+    background: var(--primary);
+    transform: translate(2px, 2px);
+}
+
+.lang-option.active {
+    background: var(--primary-dark);
+    color: white;
+}
+
+/* Para desktop - seletor sempre visível */
+@media (min-width: 993px) {
+    .language-selector {
+        display: block;
+    }
+    
+    .lang-btn .lang-text {
+        display: inline;
+    }
+}
+
+/* Para mobile - dentro da navbar */
+@media (max-width: 992px) {
+    .language-selector {
+        position: static;
+        margin: 20px auto 0;
+        width: 200px;
+        order: 99; /* Coloca por último na flexbox */
+    }
+    
+    .lang-btn {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .lang-dropdown {
+        width: 100%;
+        right: auto;
+        left: 0;
+    }
+    
+    /* Garantir que o botão não sobreponha o menu-toggle */
+    .menu-toggle {
+        z-index: 1200;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    .language-selector {
+        width: 180px;
+        margin: 15px auto 0;
+    }
+    
+    .lang-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .lang-btn .lang-text {
+        display: inline;
+    }
+    
+    .lang-dropdown {
+        width: 100%;
+    }
+}
