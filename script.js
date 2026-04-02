@@ -54,7 +54,7 @@ const translations = {
         service3Desc: "Suporte técnico, correção de problemas e manutenção preventiva de sistemas e infraestrutura.",
         
         // Experiência
-        exp1Title: "Estagiário de T.I",
+        exp1Title: "Analista de T.I",
         exp1Desc1: "Suporte técnico a sistemas e infraestrutura de TI",
         exp1Desc2: "Apoio na resolução de problemas relacionados a hardware e software",
         exp1Desc3: "Manutenção preventiva e corretiva de equipamentos",
@@ -149,7 +149,7 @@ const translations = {
         service3Desc: "Technical support, problem fixing and preventive maintenance of systems and infrastructure.",
         
         // Experience
-        exp1Title: "IT Intern",
+        exp1Title: "IT Analyst",
         exp1Desc1: "Technical support for systems and IT infrastructure",
         exp1Desc2: "Assistance in resolving hardware and software related issues",
         exp1Desc3: "Preventive and corrective equipment maintenance",
@@ -244,7 +244,7 @@ const translations = {
         service3Desc: "Soporte técnico, corrección de problemas y mantenimiento preventivo de sistemas e infraestructura.",
         
         // Experiencia
-        exp1Title: "Pasante de TI",
+        exp1Title: "Analista de T.I",
         exp1Desc1: "Soporte técnico a sistemas e infraestructura de TI",
         exp1Desc2: "Apoyo en la resolución de problemas relacionados con hardware y software",
         exp1Desc3: "Mantenimiento preventivo y correctivo de equipos",
@@ -378,7 +378,7 @@ function updateModalContent(lang) {
 }
 
 // ============================================
-// INICIALIZAÇÃO DO SISTEMA DE IDIOMAS
+// INICIALIZAÇÃO DO SISTEMA DE IDIOMAS - VERSÃO CORRIGIDA
 // ============================================
 
 // Função para inicializar o sistema de idiomas
@@ -400,36 +400,41 @@ function initLanguageSystem() {
     
     // Adicionar event listeners aos botões de idioma
     document.querySelectorAll('.lang-option').forEach(btn => {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
             const lang = this.getAttribute('data-lang');
             changeLanguage(lang);
+            // Fechar dropdown após seleção
+            document.querySelector('.language-selector').classList.remove('active');
         });
     });
     
     // Adicionar event listener ao botão principal do seletor
     const langBtn = document.querySelector('.lang-btn');
-    if (langBtn) {
+    const langSelector = document.querySelector('.language-selector');
+    
+    if (langBtn && langSelector) {
+        // Alternar dropdown ao clicar no botão
         langBtn.addEventListener('click', function(e) {
             e.stopPropagation();
-            const dropdown = document.querySelector('.lang-dropdown');
-            dropdown.style.opacity = dropdown.style.opacity === '1' ? '0' : '1';
-            dropdown.style.visibility = dropdown.style.visibility === 'visible' ? 'hidden' : 'visible';
+            langSelector.classList.toggle('active');
+        });
+        
+        // Fechar dropdown ao clicar fora
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.language-selector')) {
+                langSelector.classList.remove('active');
+            }
+        });
+        
+        // Fechar dropdown ao rolar
+        window.addEventListener('scroll', function() {
+            langSelector.classList.remove('active');
         });
     }
-    
-    // Fechar dropdown ao clicar fora
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.language-selector')) {
-            const dropdown = document.querySelector('.lang-dropdown');
-            if (dropdown) {
-                dropdown.style.opacity = '0';
-                dropdown.style.visibility = 'hidden';
-            }
-        }
-    });
 }
 
-// Dados dos projetos para o modal (mantendo versão original)
+// Dados dos projetos para o modal
 const projectsData = {
     1: {
         title: "Plataforma de Análise de Currículos com IA",
@@ -632,9 +637,13 @@ window.addEventListener('click', (e) => {
     }
 });
 
-// Menu toggle para mobile
+// Menu toggle para mobile - VERSÃO ÚNICA
 document.querySelector('.menu-toggle').addEventListener('click', function () {
-    document.querySelector('.navbar').classList.toggle('active');
+    const navbar = document.querySelector('.navbar');
+    const langSelector = document.querySelector('.language-selector');
+    
+    navbar.classList.toggle('active');
+    langSelector.classList.remove('active');
 });
 
 // Fechar menu ao clicar em um link (mobile)

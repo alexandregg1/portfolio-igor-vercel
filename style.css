@@ -138,6 +138,166 @@ p {
     border: var(--pixel-border);
 }
 
+/* ============================================
+   SISTEMA DE IDIOMAS - ESTILOS
+   ============================================ */
+
+/* Seletor de Idiomas - Canto Superior Direito */
+.language-selector {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1100;
+    width: auto;
+}
+
+.lang-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    border: var(--pixel-border);
+    cursor: pointer;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+    transition: all 0.1s ease;
+    box-shadow: var(--pixel-shadow);
+    position: relative;
+    top: 0;
+    left: 0;
+    min-width: 80px;
+}
+
+.lang-btn:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 4px 4px 0px #000;
+    background: linear-gradient(135deg, var(--primary-light), var(--primary));
+}
+
+.lang-btn i {
+    filter: drop-shadow(2px 2px 0px #000);
+}
+
+.lang-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 180px;
+    background: var(--dark-light);
+    border: var(--pixel-border);
+    box-shadow: var(--pixel-shadow);
+    margin-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.2s ease;
+    z-index: 1000;
+}
+
+.language-selector:hover .lang-dropdown,
+.language-selector.active .lang-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.lang-option {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    background: var(--dark);
+    border: none;
+    border-bottom: 2px solid #000;
+    color: var(--text);
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.lang-option:last-child {
+    border-bottom: none;
+}
+
+.lang-option:hover {
+    background: var(--primary);
+    transform: translate(2px, 2px);
+}
+
+.lang-option.active {
+    background: var(--primary-dark);
+    color: white;
+}
+
+/* Para desktop - seletor sempre visível */
+@media (min-width: 993px) {
+    .language-selector {
+        display: block;
+    }
+    
+    .lang-btn .lang-text {
+        display: inline;
+    }
+}
+
+/* Para mobile - separado da navbar */
+@media (max-width: 992px) {
+    .language-selector {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        display: block !important; /* Força a exibição */
+    }
+    
+    .lang-btn {
+        width: auto;
+        min-width: 60px;
+    }
+    
+    .lang-btn .lang-text {
+        display: none; /* Mostra apenas o ícone no mobile */
+    }
+    
+    .lang-dropdown {
+        width: 150px;
+        right: 0;
+        left: auto;
+    }
+    
+    /* Ajusta para não sobrepor o menu-toggle */
+    .menu-toggle {
+        z-index: 1200;
+    }
+}
+
+@media (max-width: 480px) {
+    .language-selector {
+        top: 15px;
+        right: 15px;
+    }
+    
+    .lang-btn {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+        min-width: 50px;
+    }
+    
+    .lang-btn i {
+        margin: 0;
+    }
+    
+    .lang-dropdown {
+        width: 130px;
+    }
+}
+
 /* Navbar à Esquerda */
 .navbar {
     position: fixed;
@@ -218,7 +378,7 @@ p {
     position: fixed;
     top: 20px;
     left: 20px;
-    z-index: 1100;
+    z-index: 1200;
     background: var(--primary);
     color: white;
     border: var(--pixel-border);
@@ -1094,26 +1254,6 @@ footer {
     z-index: -1;
 }
 
-/* Efeito de scanlines para dar mais vibe retrô//// eu tirei XD */ 
-/*body::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        linear-gradient(
-            to bottom,
-            transparent 50%,
-            rgba(0, 0, 0, 0.1) 50%
-        );
-    background-size: 100% 4px;
-    pointer-events: none;
-    z-index: 9999;
-    animation: scanline 10s linear infinite;
-}*/
-
 @keyframes scanline {
     0% {
         background-position: 0 0;
@@ -1139,10 +1279,37 @@ footer {
         transform: translateX(-100%);
         transition: transform 0.3s ease;
         width: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 80px;
     }
 
     .navbar.active {
         transform: translateX(0);
+    }
+
+    /* Ajustes para o seletor de idiomas no mobile */
+    .language-selector {
+        position: static;
+        margin: 20px auto 0;
+        width: 200px;
+        order: 99; /* Coloca por último na flexbox */
+    }
+    
+    .lang-btn {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .lang-dropdown {
+        width: 100%;
+        right: auto;
+        left: 0;
+    }
+    
+    .lang-btn .lang-text {
+        display: inline;
     }
 
     .main-content {
@@ -1154,6 +1321,7 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 1200;
     }
 
     .hero-content {
@@ -1349,6 +1517,24 @@ footer {
     .nav-links {
         padding: 0 40px;
     }
+
+    .language-selector {
+        width: 180px;
+        margin: 15px auto 0;
+    }
+    
+    .lang-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .lang-btn .lang-text {
+        display: inline;
+    }
+    
+    .lang-dropdown {
+        width: 100%;
+    }
 }
 
 @media (max-width: 360px) {
@@ -1367,161 +1553,5 @@ footer {
     .skill-item {
         flex: 0 0 120px;
         padding: 12px 8px;
-    }
-}
-
-/* Fim do estilo pixel art */
-/* ============================================
-   SISTEMA DE IDIOMAS - ESTILOS
-   ============================================ */
-
-/* Seletor de Idiomas - Canto Superior Direito */
-.language-selector {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1100;
-    width: auto;
-}
-
-.lang-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 10px 20px;
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    color: white;
-    border: var(--pixel-border);
-    cursor: pointer;
-    font-weight: 700;
-    font-family: 'Courier New', monospace;
-    text-transform: uppercase;
-    transition: all 0.1s ease;
-    box-shadow: var(--pixel-shadow);
-    position: relative;
-    top: 0;
-    left: 0;
-    min-width: 80px;
-}
-
-.lang-btn:hover {
-    transform: translate(4px, 4px);
-    box-shadow: 4px 4px 0px #000;
-    background: linear-gradient(135deg, var(--primary-light), var(--primary));
-}
-
-.lang-btn i {
-    filter: drop-shadow(2px 2px 0px #000);
-}
-
-.lang-dropdown {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 180px;
-    background: var(--dark-light);
-    border: var(--pixel-border);
-    box-shadow: var(--pixel-shadow);
-    margin-top: 10px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.2s ease;
-    z-index: 1000;
-}
-
-.language-selector:hover .lang-dropdown {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.lang-option {
-    display: block;
-    width: 100%;
-    padding: 12px 15px;
-    background: var(--dark);
-    border: none;
-    border-bottom: 2px solid #000;
-    color: var(--text);
-    font-family: 'Courier New', monospace;
-    font-weight: 700;
-    text-align: left;
-    cursor: pointer;
-    transition: all 0.1s ease;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-}
-
-.lang-option:last-child {
-    border-bottom: none;
-}
-
-.lang-option:hover {
-    background: var(--primary);
-    transform: translate(2px, 2px);
-}
-
-.lang-option.active {
-    background: var(--primary-dark);
-    color: white;
-}
-
-/* Para desktop - seletor sempre visível */
-@media (min-width: 993px) {
-    .language-selector {
-        display: block;
-    }
-    
-    .lang-btn .lang-text {
-        display: inline;
-    }
-}
-
-/* Para mobile - dentro da navbar */
-@media (max-width: 992px) {
-    .language-selector {
-        position: static;
-        margin: 20px auto 0;
-        width: 200px;
-        order: 99; /* Coloca por último na flexbox */
-    }
-    
-    .lang-btn {
-        width: 100%;
-        min-width: auto;
-    }
-    
-    .lang-dropdown {
-        width: 100%;
-        right: auto;
-        left: 0;
-    }
-    
-    /* Garantir que o botão não sobreponha o menu-toggle */
-    .menu-toggle {
-        z-index: 1200;
-    }
-}
-
-/* Ajustes para telas muito pequenas */
-@media (max-width: 480px) {
-    .language-selector {
-        width: 180px;
-        margin: 15px auto 0;
-    }
-    
-    .lang-btn {
-        padding: 8px 15px;
-        font-size: 0.9rem;
-    }
-    
-    .lang-btn .lang-text {
-        display: inline;
-    }
-    
-    .lang-dropdown {
-        width: 100%;
     }
 }
