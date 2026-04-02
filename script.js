@@ -453,8 +453,8 @@ const projectsData = {
         responsibilities: [
             "Desenvolvimento do front-end responsivo com Bootstrap",
         ],
-        demo: "https://alexandregg1.github.io/Projeto/",
-        code: "https://github.com/alexandregg1/Projeto/tree/main"
+        demo: "https://alexandregg1.github.io/projeto-landing-page-academia/",
+        code: "https://github.com/alexandregg1/projeto-landing-page-academia"
     },
     3: {
         title: "Landing Page - 4UPact - Marketing Digital",
