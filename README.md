@@ -24,7 +24,7 @@ Sou um analista de dados dedicado a descobrir padrões, otimizar processos e ger
 - **Descrição**: Projeto de Machine Learning para identificar clientes de telecomunicações com risco de cancelamento, priorizando a detecção de clientes que podem abandonar o serviço.
 - **Tecnologias**: Python, Pandas, Scikit-learn, Matplotlib, Seaborn, Machine Learning.
 
-### [Projeto 4: LUMI - PROJECT](hhttps://github.com/SabrynaRodrigues/lumi_project)
+### [Projeto 4: LUMI - PROJECT](https://github.com/SabrynaRodrigues/lumi_project/tree/consumindoAPI)
 - **Descrição**: Desenvolvimento de um site para análise automatizada de currículos com integração da Gemini AI para fornecer feedback inteligente sobre candidaturas.
 - **Tecnologias**: HTML, CSS, JavaScript.
 - **Responsabilidades**: Criação das páginas web, integrando o desgin ao HTML, CSS e JS.
