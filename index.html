@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Igor Alexandre | Desenvolvedor Full Stack</title>
+    <title>Igor Alexandre | Analista de Dados</title>
     <link rel="icon" type="image/png" href="assets/icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -16,7 +16,6 @@
             <li><a href="#home" class="active"><i class="fas fa-home"></i> <span data-i18n="home">Início</span></a></li>
             <li><a href="#skills"><i class="fas fa-cogs"></i> <span data-i18n="skills">Habilidades</span></a></li>
             <li><a href="#projects"><i class="fas fa-code"></i> <span data-i18n="projects">Projetos</span></a></li>
-            <li><a href="#services"><i class="fas fa-laptop-code"></i> <span data-i18n="services">Serviços</span></a>
             </li>
             <li><a href="#experience"><i class="fas fa-briefcase"></i> <span
                         data-i18n="experience">Experiência</span></a></li>
@@ -24,17 +23,13 @@
             <li><a href="#contact"><i class="fas fa-envelope"></i> <span data-i18n="contact">Contato</span></a></li>
         </ul>
 
-        <!-- Seletor de Idiomas -->
-        <div class="language-selector">
-            <button class="lang-btn" data-lang="pt"><i class="fas fa-globe"></i> <span
-                    class="lang-text">PT</span></button>
-            <div class="lang-dropdown">
-                <button class="lang-option" data-lang="pt">🇧🇷 Português</button>
-                <button class="lang-option" data-lang="en">🇺🇸 English</button>
-                <button class="lang-option" data-lang="es">🇪🇸 Español</button>
-            </div>
-        </div>
     </nav>
+
+    <!-- Alternador de idioma -->
+    <button type="button" class="language-switcher" id="languageSwitcher" aria-label="Mudar idioma">
+        <i class="fas fa-globe" aria-hidden="true"></i>
+        <span id="languageSwitcherText">PT</span>
+    </button>
 
     <button class="menu-toggle">
         <i class="fas fa-bars"></i>
@@ -47,10 +42,11 @@
                 <div class="hero-content">
                     <div class="hero-text">
                         <h1 data-i18n="heroTitle">Igor <span class="highlight">Alexandre</span></h1>
-                        <div class="subtitle" data-i18n="heroSubtitle">Graduando em Ciência da Computação</div>
-                        <p data-i18n="heroDescription">Desenvolvedor Full Stack com foco em Front-end, Back-end e
-                            interesse em Análise de Dados. Transformo ideias em soluções digitais funcionais e
-                            elegantes.</p>
+                        <div class="subtitle" data-i18n="heroSubtitle">Analista de Dados Júnior</div>
+                        <p data-i18n="heroDescription">Atuo na transformação de dados em análises, dashboards e
+                            insights com SQL, Power BI, Python e R. Minha formação em Ciência da Computação e
+                            experiência em TI me dão uma visão técnica sobre infraestrutura, automação e qualidade da
+                            informação.</p>
                         <div class="hero-btns">
                             <a href="#projects" class="btn" data-i18n="viewProjects">Ver Projetos</a>
                             <a href="#contact" class="btn btn-outline" data-i18n="contactMe">Entre em Contato</a>
@@ -81,143 +77,91 @@
                 <div class="projects-grid">
                     <div class="project-card" data-project="1">
                         <div class="project-img">
-                            <img src="assets/mockups/lumi.png" alt="Project 1">
+                            <img src="assets/mockups/lol-dashboard.png" alt="Project 1">
                         </div>
                         <div class="project-info">
-                            <h3 data-i18n="project1Title">Lumi - Project</h3>
-                            <p data-i18n="project1Desc">Desenvolvimento de um site para análise automatizada de
-                                currículos com integração da Gemini AI.</p>
+                            <h3 data-i18n="project1Title">Análise de Dados - League of Legends (Early Game)</h3>
+                            <p data-i18n="project1Desc">Projeto de Data Analytics que investiga quais fatores dos
+                                primeiros 10 minutos de partidas ranked mais influenciam a vitória, combinando
+                                tratamento de dados em R, validação com SQL e um dashboard interativo no Power BI.</p>
                             <div class="project-tech">
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">C#</span>
-                                <span class="tech-tag">Gemini AI API</span>
+                                <span class="tech-tag">R</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">Power BI</span>
+                                <span class="tech-tag">Data Analytics</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.youtube.com/watch?v=1DIdJb87a-A" target="_blank"><i
-                                        class="fa-brands fa-youtube"></i> <span data-i18n="videoPresentation">Video
-                                        Apresentativo</span></a>
-                                <a href="https://github.com/SabrynaRodrigues/lumi_project" target="_blank"><i
-                                        class="fab fa-github"></i> <span data-i18n="code">Código</span></a>
+                                <a href="https://github.com/alexandregg1/lol-data-analysis-early-game" target="_blank"><i
+                                       class="fab fa-github"></i> <span data-i18n="code">Repositório</span></a>
                             </div>
                         </div>
                     </div>
 
                     <div class="project-card" data-project="2">
                         <div class="project-img">
-                            <img src="assets/mockups/m2.png" alt="Project 2">
+                            <img src="assets/mockups/esports-predictivo.png" alt="Project 2">
                         </div>
                         <div class="project-info">
-                            <h3 data-i18n="project2Title">Landing Page M2 Academia</h3>
-                            <p data-i18n="project2Desc">Landing page institucional para academia integrada a sistema de
-                                atendimento automatizado via WhatsApp.</p>
+                            <h3 data-i18n="project2Title">Análise Preditiva em eSports - Previsão de Vitória em LoL</h3>
+                            <p data-i18n="project2Desc">Modelo de Machine Learning que prevê o vencedor de partidas
+                                Challenger de League of Legends usando dados dos primeiros 10 minutos, medindo o
+                                efeito "bola de neve" no early game com 89% de acurácia.</p>
                             <div class="project-tech">
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">XGBoost</span>
+                                <span class="tech-tag">R</span>
+                                <span class="tech-tag">Machine Learning</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://alexandregg1.github.io/projeto-landing-page-academia/" target="_blank"><i
-                                        class="fas fa-external-link-alt"></i> <span data-i18n="demo">Demo</span></a>
-                                <a href="https://github.com/alexandregg1/projeto-landing-page-academia" target="_blank"><i
-                                        class="fab fa-github"></i> <span data-i18n="code">Código</span></a>
+                                
+                                <a href="https://github.com/alexandregg1/esports-predictive-analysis" target="_blank"><i
+                                        class="fab fa-github"></i> <span data-i18n="code">Repositório</span></a>
                             </div>
                         </div>
                     </div>
-
                     <div class="project-card" data-project="3">
                         <div class="project-img">
-                            <img src="assets/mockups/4upact.png" alt="Project 3">
+                            <img src="assets/mockups/01_distribuicao_churn.png" alt="Project 3">
                         </div>
                         <div class="project-info">
-                            <h3 data-i18n="project3Title">Landing Page - 4UPact - Marketing Digital</h3>
-                            <p data-i18n="project3Desc">Landing page institucional para agência de marketing digital.
-                            </p>
+                            <h3 data-i18n="project3Title">Previsão de Churn — Telco Customer Dataset</h3>
+                            <p data-i18n="project3Desc">Construir um modelo classificatório que identifique clientes com risco de churn, priorizando recall sobre precision — a 
+                                lógica de negócio adotada foi: deixar passar um cliente que vai cancelar (falso negativo) é mais caro do que oferecer uma ação de retenção a alguém que não ia cancelar
+                                 mesmo (falso positivo).</p>
                             <div class="project-tech">
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">Scikit-learn</span>
+                                <span class="tech-tag">Matplotlib</span>
+                                <span class="tech-tag">Seaborn</span>
+                                <span class="tech-tag">Machine Learning</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://alexandregg1.github.io/4upact-teste/" target="_blank"><i
-                                        class="fas fa-external-link-alt"></i> <span data-i18n="demo">Demo</span></a>
-                                <a href="https://github.com/alexandregg1/4upact-teste" target="_blank"><i
-                                        class="fab fa-github"></i> <span data-i18n="code">Código</span></a>
+                                
+                                <a href="https://github.com/alexandregg1/esports-predictive-analysis" target="_blank"><i
+                                        class="fab fa-github"></i> <span data-i18n="code">Repositório</span></a>
                             </div>
                         </div>
                     </div>
-
                     <div class="project-card" data-project="4">
                         <div class="project-img">
-                            <img src="assets/mockups/neura.png" alt="Project 4">
+                            <img src="assets/mockups/lumi.png" alt="Project 4">
                         </div>
                         <div class="project-info">
-                            <h3 data-i18n="project4Title">Landing Page - Centro de Psicologia Infantil</h3>
-                            <p data-i18n="project4Desc">Página institucional com informações sobre localização, redes
-                                sociais e formas de contato.</p>
+                            <h3 data-i18n="project4Title">Lumi - Project</h3>
+                            <p data-i18n="project4Desc">Desenvolvimento de um site para análise automatizada de currículos com integração da Gemini AI para fornecer feedback inteligente sobre candidaturas..</p>
                             <div class="project-tech">
                                 <span class="tech-tag">HTML</span>
                                 <span class="tech-tag">CSS</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#"><i class="fas fa-external-link-alt"></i> <span
-                                        data-i18n="demo">Demo</span></a>
-                                <a href="https://github.com/TR1Z1E/Projeto-Neuro-crescer" target="_blank"><i
-                                        class="fab fa-github"></i> <span data-i18n="code">Código</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-project="5">
-                        <div class="project-img">
-                            <img src="assets/mockups/bot.png" alt="Project 5">
-                        </div>
-                        <div class="project-info">
-                            <h3 data-i18n="project5Title">Bot para WhatsApp</h3>
-                            <p data-i18n="project5Desc">Bot para atendimento automático via WhatsApp.</p>
-                            <div class="project-tech">
                                 <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Gemini AI</span>
+                                <span class="tech-tag">"C#"</span>
                             </div>
                             <div class="project-links">
-                                <a href="#"><i class="fas fa-external-link-alt"></i> <span
-                                        data-i18n="demo">Demo</span></a>
-                                <a href="https://github.com/alexandregg1/ProjetoBOT" target="_blank"><i
-                                        class="fab fa-github"></i> <span data-i18n="code">Código</span></a>
+                                    <a href="https://github.com/SabrynaRodrigues/lumi_project" target="_blank"><i
+                                    class="fab fa-github"></i> <span data-i18n="code">Repositório</span></a>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="services" id="services">
-            <div class="container">
-                <h2 class="section-title" data-i18n="sectionServices">Serviços</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3 data-i18n="service1Title">Desenvolvimento Front-end</h3>
-                        <p data-i18n="service1Desc">Criação de interfaces modernas e responsivas usando HTML, CSS,
-                            JavaScript e frameworks como Bootstrap.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h3 data-i18n="service2Title">Websites Responsivos</h3>
-                        <p data-i18n="service2Desc">Desenvolvimento de sites que funcionam perfeitamente em todos os
-                            dispositivos e tamanhos de tela.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-wrench"></i>
-                        </div>
-                        <h3 data-i18n="service3Title">Manutenção e Suporte</h3>
-                        <p data-i18n="service3Desc">Suporte técnico, correção de problemas e manutenção preventiva de
-                            sistemas e infraestrutura.</p>
                     </div>
                 </div>
             </div>
@@ -278,16 +222,24 @@
                         </div>
                     </div>
                     <div class="about-text">
-                        <h3 data-i18n="aboutTitle">Desenvolvedor Full Stack & Estudante de Ciência da Computação</h3>
-                        <p data-i18n="aboutText1">Graduando em Ciência da Computação pela Universidade Nove de Julho
-                            (UNINOVE), com experiência acadêmica em desenvolvimento front-end e back-end. Além disso,
-                            possuo experiência em manutenção e suporte de computadores.</p>
-                        <p data-i18n="aboutText2">Meu objetivo é atuar em áreas relacionadas à Tecnologia da Informação,
-                            Desenvolvimento Front-end e Back-end, além de ter interesse em Análise de Dados e Engenharia
-                            de Dados.</p>
-                        <p data-i18n="aboutText3">Sou uma pessoa proativa, com facilidade para aprender novas
-                            tecnologias e trabalhar em equipe. Busco constantemente me desenvolver profissionalmente e
-                            contribuir para projetos desafiadores.</p>
+                        <h3 data-i18n="aboutTitle">Analista de Dados Júnior & Bacharel em Ciência da Computação</h3>
+                        <p data-i18n="aboutText1">Analista de Dados Júnior com experiência prática em SQL, Power BI,
+                            Python e R, atuando na transformação de dados em análises, dashboards e insights para
+                            apoiar decisões de negócio. Minha formação em Ciência da Computação pela UNINOVE, somada à
+                            experiência em TI, me dá uma visão técnica sobre infraestrutura, automação, integração de
+                            sistemas e qualidade da informação.</p>
+                        <p data-i18n="aboutText2">Atualmente atuo como Analista de T.I., trabalhando com suporte,
+                            hardware, infraestrutura e integração de sistemas, enquanto aplico análise de dados e
+                            automação para identificar padrões, organizar informações e melhorar processos. Em
+                            projetos de Data Analytics, já trabalhei com bases de 12 mil+ registros e desenvolvi um
+                            dashboard no Power BI que consolida 4 dimensões de negócio em uma única interface,
+                            reduzindo de horas para segundos o tempo de consolidação de relatórios.</p>
+                        <p data-i18n="aboutText3">Também desenvolvi um modelo preditivo para prever o vencedor de
+                            partidas de League of Legends aos 10 minutos de jogo, utilizando engenharia de variáveis,
+                            seleção de features e validação do modelo em R e Python, alcançando 89% de acurácia. Meu
+                            diferencial é combinar análise de dados com visão de desenvolvimento e TI, e busco
+                            oportunidades como Analista de Dados Júnior onde eu possa unir análise, visualização, SQL,
+                            programação e visão técnica para resolver problemas de negócio.</p>
                         <div class="hero-btns">
                             <a href="#contact" class="btn" data-i18n="letsTalk">Vamos Conversar</a>
                         </div>
@@ -315,10 +267,10 @@
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div>
-                                <a href="mailto:igoralexandre.contato@gmail.com" class="email-contact"
+                                <a href="mailto:igoralexandregg15@gmail.com" class="email-contact"
                                     style="text-decoration: none; color: inherit;">
                                     <h3 data-i18n="email">Email</h3>
-                                    <p>igoralexandre.contato@gmail.com</p>
+                                    <p>igoralexandregg15@gmail.com</p>
                                 </a>
                             </div>
                         </div>
@@ -329,12 +281,13 @@
                             <div>
                                 <h3 data-i18n="education">Formação</h3>
                                 <p data-i18n="educationText">Bacharelado em Ciência da Computação - UNINOVE (2023 -
-                                    Presente)</p>
+                                    Presente) · Google: Foundations - Data, Data, Everywhere · Statistics for Data
+                                    Science and Business Analysis - Udemy</p>
                             </div>
                         </div>
                     </div>
                     <div class="contact-form">
-                        <form action="https://formsubmit.co/igoralexandre.contato@gmail.com" method="POST">
+                        <form action="https://formsubmit.co/igoralexandregg15@gmail.com" method="POST">
                             <div class="form-group">
                                 <label for="name" data-i18n="nameLabel">Nome</label>
                                 <input type="text" id="name" name="name" class="form-control" required
@@ -401,7 +354,7 @@
                     <a href="" id="modalDemo" target="_blank" rel="noopener noreferrer"><i
                             class="fas fa-external-link-alt"></i> <span data-i18n="viewDemo">Ver Demo</span></a>
                     <a href="" id="modalCode" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>
-                        <span data-i18n="viewCode">Ver Código</span></a>
+                        <span data-i18n="viewCode">Ver Repositório</span></a>
                 </div>
             </div>
         </div>
